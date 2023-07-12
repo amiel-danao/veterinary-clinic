@@ -26,3 +26,15 @@
 	<!-- Custom scripts -->
 	<script src="assets/js/scripts.js"></script>
 	<script src="assets/js/login.js"></script>
+	<script>
+		$("#registerButton").on("click", function(event){
+			event.preventDefault();
+			let password = $("input[name='customerDetailsPassword']")[0].value;
+			let retypePassword = $("input[name='customerDetailsRetypePassword']")[0].value;
+			if(password == retypePassword){
+				$("#registerForm")[0].submit();
+			} else {
+				alert("Does not match!");
+			}
+		});
+	</script>

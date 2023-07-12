@@ -1,11 +1,10 @@
 <?php
 	session_start();
-	
 	// Check if user is already logged in
 	if(isset($_SESSION['loggedIn'])){
 		header('Location: index.php');
 		exit();
-	}
+	} 
 	
 	require_once('inc/config/constants.php');
 	require_once('inc/config/db.php');
@@ -20,7 +19,7 @@ $action = '';
 		$action = $_GET['action'];
 		if($action == 'register'){
 ?>
-			<div class="container">
+			<!-- <div class="container">
 			  <div class="row justify-content-center">
 			  <div class="col-sm-12 col-md-5 col-lg-5">
 				<div class="card">
@@ -33,7 +32,7 @@ $action = '';
 					  <div class="form-group">
 						<label for="registerFullName">Name<span class="requiredIcon">*</span></label>
 						<input type="text" class="form-control" id="registerFullName" name="registerFullName">
-						<!-- <small id="emailHelp" class="form-text text-muted"></small> -->
+						<?php //<!-- <small id="emailHelp" class="form-text text-muted"></small> --> ?>
 					  </div>
 					   <div class="form-group">
 						<label for="registerUsername">Username<span class="requiredIcon">*</span></label>
@@ -56,7 +55,8 @@ $action = '';
 				</div>
 				</div>
 			  </div>
-			</div>
+			</div> -->
+			<?php include("pages/customerForm.php"); ?>
 <?php
 			require 'inc/footer.php';
 			echo '</body></html>';
@@ -134,5 +134,6 @@ $action = '';
 <?php
 	require 'inc/footer.php';
 ?>
+	
   </body>
 </html>
