@@ -61,7 +61,7 @@ $action = '';
 			require 'inc/footer.php';
 			echo '</body></html>';
 			exit();
-		} elseif($action == 'resetPassword'){
+		} else if($action == 'resetPassword'){
 ?>
 			<div class="container">
 			  <div class="row justify-content-center">
