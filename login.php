@@ -114,7 +114,7 @@ $action = '';
 			<form action="">
 			<div id="loginMessage"></div>
 			  <div class="form-group">
-				<label for="loginUsername">Username</label>
+				<label for="loginUsername">Email</label>
 				<input type="text" class="form-control" id="loginUsername" name="loginUsername">
 			  </div>
 			  <div class="form-group">

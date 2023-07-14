@@ -15,9 +15,12 @@ if($result->num_rows == 0){
     $userDistrict = $_POST['customerDetailsCustomerDistrict'];
     $userCreatedOn = date("Y-m-d H:i:s");
     $userStatus = "Active";
-    $con->query("INSERT INTO customer (fullName, email, mobile, phone2, address, address2, city, district, createdOn, password)
+    $conStatus = $con->query("INSERT INTO customer (fullName, email, mobile, phone2, address, address2, city, district, createdOn, password)
                 VALUES ('$userFullName', '$userEmail', '$userPhone1', '$userPhone2', '$userAddress1', '$userAddress2', '$userCity', '$userDistrict', '$userCreatedOn', '$userPassword')");
-    
+    if($conStatus == true){
+        header("Location: http://localhost/veterinary-clinic/login.php");
+        die();
+    }
 } else {
     $_SESSION['errorMessage'] = "Email already taken!";
     header("Location: http://localhost/veterinary-clinic/login.php?action=register");
