@@ -6,7 +6,7 @@ if (isset($_SESSION['errorMessage'])) {
 }
 ?>
 
-<div class="" id="v-pills-customer" role="tabpanel" aria-labelledby="v-pills-customer-tab" style="padding-left: 150px; padding right: 150px">
+<div class="" id="v-pills-customer" role="tabpanel" aria-labelledby="v-pills-customer-tab" style="padding-left: 150px; padding-right: 150px;">
 	<div class="card card-outline-secondary my-4">
 		<div class="card-header">Customer Details</div>
 			<div class="card-body">
